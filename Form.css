@@ -27,7 +27,7 @@ input[type=password], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-button[type=submit] {
+input[type=button] {
     width: 85%;
     height: 30px;
     background-color: #4CAF50;

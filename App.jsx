@@ -47,6 +47,18 @@ class App extends React.Component{
   errorClass(error){
     return(error.length===0?'':'has-error');
   }
+  login(){
+    var user=this.state.account;
+    var pass=this.state.password;
+    if(user=="langvan01"&&pass=="langvan01"){
+      alert('Login successfully');
+      window.location="home.html";
+    }
+    else{
+      alert('login fail');
+    }
+  }
+
 
   render(){
     return(
@@ -63,10 +75,12 @@ class App extends React.Component{
           <input type="password" className="account" name="password"
               placeholder="Password" value={this.state.password} onChange={this.handleUserInput} />
         </div>
-        <button type="submit" className="signUpButton">Sign up</button>
+        <input type="button" value="Login" className="signUpButton" onclick="login()" />
 
         <div><a href="#">Quên mật khẩu?</a></div>
+        <span>Demo Acc: Username: langvan01  Pass: langvan01</span>
       </form>
+
     )
   }
 }
